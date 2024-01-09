@@ -19,10 +19,10 @@ struct SendMoneyView: View {
             Spacer()
 
             //friends
-            HStack(spacing: -24){
+            HStack(spacing: -26){
                 ForEach(appModel.selectedFriends, id: \.self) { person in
                     
-                    FriendCard(name: person, image: person, showName: true)
+                    FriendCard(name: person, image: person, selected: true)
                         
                 }
             }
@@ -61,12 +61,17 @@ struct SendMoneyView: View {
                     .foregroundStyle(.white.opacity(0.6))
                     .padding(.vertical, 20)
                     .padding(.horizontal, 24)
-                    .background(.kGray)
+                    .background(.kGray3)
                     .clipShape(Capsule())
                 }
                 
                 Button {
                     print(appModel.amountToSend)
+                    
+                    withAnimation(Animation.spring(response: 0.6, dampingFraction: 0.3, blendDuration: 0)){
+                        appModel.selectedFriends.append("Beni")
+                    }
+
                 } label: {
                     Text("Send money")
                         .foregroundStyle(.black)

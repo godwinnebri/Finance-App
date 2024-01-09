@@ -20,7 +20,9 @@ struct NumberPadView: View {
                     ForEach(row, id: \.self) { button in
                         NumpadButton(
                             title: button,
-                            buttonColor: button == "." || button == "⌫" ? .clear : .kGray,
+                            buttonColor: button == "·" || button == "⌫" ? .clear : .kGray3,
+                            numberColor: button == "·" || button == "⌫" ? .gray : .white,
+                            
                             action: {
                                 self.handleButtonPress(button)
                             }

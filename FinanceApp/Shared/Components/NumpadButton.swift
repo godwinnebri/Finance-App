@@ -12,6 +12,7 @@ struct NumpadButton: View {
 
     let title: String
     let buttonColor: Color
+    let numberColor: Color
     let action: () -> Void
     
     var body: some View {
@@ -21,7 +22,7 @@ struct NumpadButton: View {
                     .padding(.vertical, 16)
                     .frame(maxWidth: .infinity)
                     .background(buttonColor)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(numberColor)
                     .cornerRadius(16)
             }
         }
@@ -29,5 +30,5 @@ struct NumpadButton: View {
 
 
 #Preview {
-    NumpadButton(title: "1", buttonColor: .kGray, action: {})
+    NumpadButton(title: "1", buttonColor: .kGray, numberColor: .white, action: {})
 }

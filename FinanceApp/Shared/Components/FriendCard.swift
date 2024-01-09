@@ -10,7 +10,7 @@ import SwiftUI
 struct FriendCard: View {
     var name : String
     var image : String
-    var showName : Bool
+    var selected : Bool
     
     var body: some View {
         VStack(spacing: 10) {
@@ -20,14 +20,14 @@ struct FriendCard: View {
                     .scaledToFit()
                     .frame(height: 48)
                     .padding(12)
-                    .background(.kGray2)
+                    .background(.kGray3)
                     .cornerRadius(80)
                     .overlay(
                         RoundedRectangle(cornerRadius: 80)
-                            .stroke(Color.black, lineWidth: 4)
+                            .stroke(.kGray4, lineWidth: 4)
                     )
                 
-            if showName {
+            if !selected {
                 Text(name)
                     .font(.callout)
                     .foregroundStyle(.white)
@@ -38,5 +38,5 @@ struct FriendCard: View {
 }
 
 #Preview {
-    FriendCard(name: "Broo", image: "Settings", showName: true)
+    FriendCard(name: "Broo", image: "Settings", selected: true)
 }

@@ -81,7 +81,7 @@ struct HomeView: View {
                                 appModel.showSendMoney = true
                             } label: {
                             
-                                FriendCard(name: person, image: person, showName: true)
+                                FriendCard(name: person, image: person, selected: false)
                                 
                             }
                         }
