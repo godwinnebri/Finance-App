@@ -8,45 +8,57 @@
 import SwiftUI
 
 struct NumberPadView: View {
+    
+    @State private var appModel = AppModel()
+
     @Binding var inputText: Double
 
-    let numberPad: [[String]] = [
-            ["1", "2", "3"],
-            ["4", "5", "6"],
-            ["7", "8", "9"],
-            [".", "0", "x"]
-        ]
-
     var body: some View {
-        VStack(spacing: 10) {
-            ForEach(numberPad, id: \.self) { row in
-                HStack(spacing: 10) {
+        VStack(spacing: 6) {
+            ForEach(appModel.numberPad, id: \.self) { row in
+                HStack(spacing: 6) {
                     ForEach(row, id: \.self) { button in
-                        NumpadButton(title: button, action: {
-                            self.handleButtonPress(button)
-                        })
+                        NumpadButton(
+                            title: button,
+                            buttonColor: button == "." || button == "⌫" ? .clear : .kGray,
+                            action: {
+                                self.handleButtonPress(button)
+                            }
+                        )
                     }
                 }
             }
         }
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     private func handleButtonPress(_ button: String) {
         switch button {
         case ".":
             // Check if the inputText already contains a decimal point
-            if !String(format: "%.0f", inputText).contains(".") {
-                inputText = inputText == 0 ? 0.0 : inputText  // Ensure there's a leading zero if inputText is 0
+            let decimalPart = inputText.truncatingRemainder(dividingBy: 1)
+            if decimalPart == 0 {
+                inputText = inputText == 0 ? 0.0 : inputText  
+                // Ensure there's a leading zero if inputText is 0
                 inputText += 0.0  // Append the decimal point
             }
-        case "x":
+        case "⌫":
             // Handle delete button
-            inputText = floor(inputText / 10)
+                inputText = floor(inputText / 10)
         default:
             // Convert the button value to a double and append it to the input text
-            inputText = inputText == 0 ? Double(button) ?? 0 : inputText * 10 + Double(button)! 
+                inputText = inputText == 0 ? Double(button) ?? 0 : inputText * 10 + (Double(button) ?? 0)
+
         }
     }
+
 
    
 

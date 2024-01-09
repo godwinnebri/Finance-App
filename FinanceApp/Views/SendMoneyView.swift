@@ -15,17 +15,23 @@ struct SendMoneyView: View {
             Text("Send to")
                 .font(.headline)
             
+            
+            Spacer()
+
             //friends
             HStack(spacing: -24){
                 ForEach(appModel.selectedFriends, id: \.self) { person in
                     
-                    FriendCard(name: person, image: person, showName: false)
+                    FriendCard(name: person, image: person, showName: true)
                         
                 }
             }
             
+            Spacer()
+
             //money
             VStack(spacing: 8) {
+
                 Text(appModel.amountToSend, format: .currency(code: "GBP"))
                     .font(.custom("SF Pro", size: 44))
                     .foregroundStyle(appModel.amountToSend == 0.00 ? .white.opacity(0.4) : .white)
@@ -34,9 +40,13 @@ struct SendMoneyView: View {
                     .foregroundStyle(.white.opacity(0.6))
             }
             
+            Spacer()
+            Spacer()
+
+
             
             //send button
-            HStack(spacing: 18) {
+            HStack(spacing: 16) {
                 Button {
                     
                 } label: {
@@ -50,7 +60,7 @@ struct SendMoneyView: View {
                     }
                     .foregroundStyle(.white.opacity(0.6))
                     .padding(.vertical, 20)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 24)
                     .background(.kGray)
                     .clipShape(Capsule())
                 }
@@ -64,12 +74,16 @@ struct SendMoneyView: View {
                         .padding(.horizontal, 42)
                         .background(.kPrimary)
                         .clipShape(Capsule())
+                        .frame(maxWidth: .infinity)
                 }
             }
+            .padding(.bottom, 16)
+            
             NumberPadView(inputText: $appModel.amountToSend)
-            Spacer()
+            
         }
         .padding()
+        .preferredColorScheme(.dark)
     }
 }
 
