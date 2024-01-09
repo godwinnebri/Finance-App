@@ -66,7 +66,7 @@ struct SendMoneyView: View {
                         .clipShape(Capsule())
                 }
             }
-            NumberPadView(inputText: appModel.amountToSend)
+            NumberPadView(inputText: $appModel.amountToSend)
             Spacer()
         }
         .padding()

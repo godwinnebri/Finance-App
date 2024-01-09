@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct NumpadButton: View {
-    let title: Double
+    let title: String
     let action: () -> Void
-
+    
     var body: some View {
-        Button(action: action) {
-            Text(title, format: .number)
-                .font(.title)
-                .frame(width: 60, height: 60)
-                .background(Color.gray)
-                .foregroundColor(.white)
-                .cornerRadius(10)
+            Button(action: action) {
+                Text(title)
+                    .font(.title)
+                    .frame(width: 60, height: 60)
+                    .background(Color.gray)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
         }
     }
-}
+
 
 #Preview {
-    NumpadButton(title: 1, action: {print("Button pressed")})
+    NumpadButton(title: "1", action: {})
 }

@@ -14,6 +14,6 @@ class AppModel: Codable {
 
     var showSendMoney = false
     
-    var amountToSend = 0.00
+    var amountToSend = 0
 
 }
