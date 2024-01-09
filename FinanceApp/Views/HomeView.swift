@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var appModel = AppModel()
+    
     var body: some View {
         VStack(){
             
@@ -73,18 +75,13 @@ struct HomeView: View {
                 
                 
                 ScrollView(.horizontal, showsIndicators: false){
-                    HStack{
-                        ForEach(0..<10) { person in
-                            VStack(spacing: 10) {
-                                Image("Beni")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 48)
-                                    .padding(12)
-                                    .background(.white.opacity(0.1))
-                                    .cornerRadius(80)
-                                
-                                Text("Beni")
+                    HStack(spacing: 14){
+                        ForEach(appModel.friends, id: \.self) { person in
+                            Button {
+                                appModel.showSendMoney = true
+                            } label: {
+                            
+                                FriendCard(name: person, image: person, showName: true)
                                 
                             }
                         }
@@ -93,11 +90,15 @@ struct HomeView: View {
             }
 
         }
-        .preferredColorScheme(.dark)
         .padding()
+        .sheet(isPresented: $appModel.showSendMoney) {
+            SendMoneyView()
+        }
     }
 }
 
 #Preview {
     HomeView()
+        .preferredColorScheme(.dark)
+
 }

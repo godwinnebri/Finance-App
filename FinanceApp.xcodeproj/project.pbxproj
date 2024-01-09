@@ -13,6 +13,13 @@
 		CE6C66722B35FD8E00871036 /* VerticalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C66712B35FD8E00871036 /* VerticalCard.swift */; };
 		CE6C66742B3607EA00871036 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C66732B3607EA00871036 /* HomeView.swift */; };
 		CE6C66762B363B6500871036 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C66752B363B6500871036 /* CircleButton.swift */; };
+		CEA0A0972B4CD8930082A252 /* SendMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A0962B4CD8930082A252 /* SendMoneyView.swift */; };
+		CEA0A0992B4CDDD50082A252 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A0982B4CDDD50082A252 /* Color+Hex.swift */; };
+		CEA0A09B2B4CE0B00082A252 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A09A2B4CE0B00082A252 /* AppModel.swift */; };
+		CEA0A09D2B4CE43E0082A252 /* FriendCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A09C2B4CE43D0082A252 /* FriendCard.swift */; };
+		CEA0A09F2B4CEBD50082A252 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A09E2B4CEBD50082A252 /* PrimaryButton.swift */; };
+		CEA0A0A12B4CF1130082A252 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A0A02B4CF1130082A252 /* NumberPadView.swift */; };
+		CEA0A0A32B4CF1A40082A252 /* NumpadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A0A22B4CF1A40082A252 /* NumpadButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		CE6C66712B35FD8E00871036 /* VerticalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCard.swift; sourceTree = "<group>"; };
 		CE6C66732B3607EA00871036 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CE6C66752B363B6500871036 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		CEA0A0962B4CD8930082A252 /* SendMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyView.swift; sourceTree = "<group>"; };
+		CEA0A0982B4CDDD50082A252 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		CEA0A09A2B4CE0B00082A252 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		CEA0A09C2B4CE43D0082A252 /* FriendCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCard.swift; sourceTree = "<group>"; };
+		CEA0A09E2B4CEBD50082A252 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		CEA0A0A02B4CF1130082A252 /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
+		CEA0A0A22B4CF1A40082A252 /* NumpadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +71,6 @@
 			children = (
 				CE6C666A2B35FBDF00871036 /* Views */,
 				CE6C666C2B35FC3800871036 /* Shared */,
-				CE6C66702B35FCD200871036 /* View model */,
 				CE6C666F2B35FCAA00871036 /* Models */,
 				CE6C665C2B35FB1400871036 /* FinanceAppApp.swift */,
 				CE6C66602B35FB1800871036 /* Assets.xcassets */,
@@ -78,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6C66732B3607EA00871036 /* HomeView.swift */,
+				CEA0A0962B4CD8930082A252 /* SendMoneyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,6 +101,10 @@
 			children = (
 				CE6C66712B35FD8E00871036 /* VerticalCard.swift */,
 				CE6C66752B363B6500871036 /* CircleButton.swift */,
+				CEA0A09C2B4CE43D0082A252 /* FriendCard.swift */,
+				CEA0A09E2B4CEBD50082A252 /* PrimaryButton.swift */,
+				CEA0A0A02B4CF1130082A252 /* NumberPadView.swift */,
+				CEA0A0A22B4CF1A40082A252 /* NumpadButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -103,6 +121,7 @@
 		CE6C666D2B35FC5300871036 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CEA0A0982B4CDDD50082A252 /* Color+Hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -110,15 +129,9 @@
 		CE6C666F2B35FCAA00871036 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CEA0A09A2B4CE0B00082A252 /* AppModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		CE6C66702B35FCD200871036 /* View model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,10 +204,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA0A09F2B4CEBD50082A252 /* PrimaryButton.swift in Sources */,
+				CEA0A09B2B4CE0B00082A252 /* AppModel.swift in Sources */,
 				CE6C665D2B35FB1400871036 /* FinanceAppApp.swift in Sources */,
 				CE6C66742B3607EA00871036 /* HomeView.swift in Sources */,
 				CE6C66722B35FD8E00871036 /* VerticalCard.swift in Sources */,
+				CEA0A0972B4CD8930082A252 /* SendMoneyView.swift in Sources */,
 				CE6C66762B363B6500871036 /* CircleButton.swift in Sources */,
+				CEA0A0A32B4CF1A40082A252 /* NumpadButton.swift in Sources */,
+				CEA0A0A12B4CF1130082A252 /* NumberPadView.swift in Sources */,
+				CEA0A0992B4CDDD50082A252 /* Color+Hex.swift in Sources */,
+				CEA0A09D2B4CE43E0082A252 /* FriendCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
