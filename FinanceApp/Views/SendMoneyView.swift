@@ -72,7 +72,7 @@ struct SendMoneyView: View {
                         } label: {
                             HStack{
                                 Text("From")
-                                    .padding(.trailing, 4)
+                                    .padding(.trailing, 8)
                                 Text("🇬🇧")
                                     .font(.title3)
                                 Image(systemName: "chevron.down")
@@ -83,7 +83,7 @@ struct SendMoneyView: View {
                             .padding(.horizontal, 20)
                             .background(.kGray3)
                             .clipShape(Capsule())
-                            .frame(maxWidth: .infinity)
+                            //.frame(maxWidth: .infinity)
                         }
                         
                         Button {
@@ -92,20 +92,21 @@ struct SendMoneyView: View {
                             }
                         } label: {
                             Text("Send money")
+                                .frame(maxWidth: .infinity)
                                 .foregroundStyle(.black)
                                 .padding(.vertical, 20)
-                                .padding(.horizontal, 42)
+                                .padding(.horizontal, 34)
                                 .background(.kPrimary)
                                 .clipShape(Capsule())
-                                .frame(maxWidth: .infinity)
                         }
                     }
-                    .padding()
                     
                 } //v stack
                 .onTapGesture {
                     appModel.showSendTo = false
                 }
+                .padding(.horizontal)
+
                 
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack(alignment: .top, spacing: 16) {
@@ -136,7 +137,6 @@ struct SendMoneyView: View {
                     }
                     .padding(16)
                 } //pop up
-                .frame(width: 382, alignment: .topLeading)
                 .background(.kGray3)
                 .cornerRadius(34)
                 .overlay(
@@ -146,11 +146,12 @@ struct SendMoneyView: View {
                 )
                 .scaleEffect(appModel.showSendTo ? 1 : 0)
                 .offset(y: 36)
+                .padding()
 
 
                 
             } //z stack
-            .padding(.bottom, 16)
+            .padding(.bottom, 4)
 
             NumberPadView(inputText: $appModel.amountToSend)
                 .padding()
