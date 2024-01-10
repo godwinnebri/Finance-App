@@ -21,6 +21,7 @@
 		CEA0A09F2B4CEBD50082A252 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A09E2B4CEBD50082A252 /* PrimaryButton.swift */; };
 		CEA0A0A12B4CF1130082A252 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A0A02B4CF1130082A252 /* NumberPadView.swift */; };
 		CEA0A0A52B4CFE4D0082A252 /* NumpadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0A0A42B4CFE4D0082A252 /* NumpadButton.swift */; };
+		CED289382B4E01D70077C3AA /* SendtoFriendCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED289372B4E01D70077C3AA /* SendtoFriendCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		CEA0A09E2B4CEBD50082A252 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		CEA0A0A02B4CF1130082A252 /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		CEA0A0A42B4CFE4D0082A252 /* NumpadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadButton.swift; sourceTree = "<group>"; };
+		CED289372B4E01D70077C3AA /* SendtoFriendCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendtoFriendCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				CEA0A0A02B4CF1130082A252 /* NumberPadView.swift */,
 				CEA0A0A42B4CFE4D0082A252 /* NumpadButton.swift */,
 				CE66BC102B4DA35900B2C264 /* TextAnimatableValue.swift */,
+				CED289372B4E01D70077C3AA /* SendtoFriendCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA0A09F2B4CEBD50082A252 /* PrimaryButton.swift in Sources */,
+				CED289382B4E01D70077C3AA /* SendtoFriendCard.swift in Sources */,
 				CEA0A09B2B4CE0B00082A252 /* AppModel.swift in Sources */,
 				CE6C665D2B35FB1400871036 /* FinanceAppApp.swift in Sources */,
 				CE6C66742B3607EA00871036 /* HomeView.swift in Sources */,

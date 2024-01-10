@@ -31,6 +31,9 @@ extension ShapeStyle where Self == Color {
         Color(hex: 0xff1C1C1E)
     }
     
+    static var kGray5: Color {
+        Color(hex: 0xff31343B)
+    }
     
 }
 

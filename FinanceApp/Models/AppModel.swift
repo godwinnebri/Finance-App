@@ -14,6 +14,10 @@ class AppModel {
 
     var showSendMoney = false
     
+    var friendSelected = false
+    
+    var showSendTo = false
+
     var amountToSend = 0.0
     
     // Default Formatter
